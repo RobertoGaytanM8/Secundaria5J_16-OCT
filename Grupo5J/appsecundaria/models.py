@@ -9,9 +9,12 @@ class AlumnoT(models.Model):
     fecha_ingreso=models.DateField(verbose_name="Fecha Ingreso", null=False, blank=False)
 
 class Meta:
-    db_table="Alumnos"
+    db_table="AlumnoT"
     verbose_name="Alumno"
     verbose_name_plural="Alumno"
+
+def __str__(self) -> str:
+        return self.apaterno
 
 class Frase (models.Model):
     comentario=models.TextField(verbose_name="Comentario", max_length=400)
@@ -21,3 +24,6 @@ class Meta:
     db_table="Frase"
     verbose_name="Frase"
     verbose_name_plural="frases"
+
+def  __str__(self) -> str:
+    return self.comentario
